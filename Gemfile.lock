@@ -16,10 +16,18 @@ GIT
       omniauth-oauth2 (~> 1.0.0.rc2)
 
 GIT
-  remote: git://github.com/mbleigh/omniauth-facebook.git
-  revision: f116d38589046bee0e8ba4ccb3d1ea2879a354a2
+  remote: git://github.com/mbleigh/omniauth-linkedin.git
+  revision: 673a8688da9c8e6c9c96a1edc88f3518debe4f5a
+  branch: patch-1
   specs:
-    omniauth-facebook (0.0.0)
+    omniauth-linkedin (0.0.1)
+      omniauth-oauth (~> 1.0.0.rc2)
+
+GIT
+  remote: git://github.com/mkdynamic/omniauth-facebook.git
+  revision: e585e8d9158f3317322c2c29cf6b97bfd414ec85
+  specs:
+    omniauth-facebook (1.0.0.rc1)
       omniauth-oauth2 (~> 1.0.0.rc2)
 
 GEM
@@ -79,6 +87,7 @@ DEPENDENCIES
   omniauth-contrib (~> 1.0.0.rc2)!
   omniauth-facebook!
   omniauth-github (~> 1.0.0.rc2)!
+  omniauth-linkedin!
   omniauth-openid (~> 1.0.0.rc2)
   redis
   sinatra

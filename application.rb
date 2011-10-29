@@ -18,6 +18,7 @@ use Rack::Session::Cookie
 use OmniAuth::Builder do
   provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
   provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :linkedin, ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET']
   provider :open_id, :store => OpenID::Store::Redis.new($redis, 'openid:')
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
 end

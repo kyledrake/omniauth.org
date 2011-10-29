@@ -36,4 +36,14 @@ end</pre></code>
   <p>Want an idea of the different providers OmniAuth gives you the
   ability to authenticate through? Try out any of the providers in the list below,
   each one is a live example of authenticating with OmniAuth!</p>
+
+  <% OMNIAUTH_STRATEGIES.each do |provider| %>
+    <article class='provider <%= provider.slug %>'>
+      <h1><%= provider.name %> <small>by <a href="https://github.com/<%= provider.author %>"><%= provider.author %></a></h1>
+      <nav>
+        <a class='button' href='<%= provider.url %>'>Usage</a>
+        <a class='button' href='/auth/<%= provider.slug %>'>Try Me!</a>
+      </nav>
+    </article>
+  <% end %>
 </section>

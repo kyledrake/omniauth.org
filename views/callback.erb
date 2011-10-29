@@ -1,0 +1,8 @@
+<h2>Authentication Success!</h2>
+
+<p class='big'>Congratulations! You successfully authenticated to OmniAuth 
+via the <code><%= params[:provider] %></code> strategy. Here's the information
+you would have as a developer if you were using this OmniAuth strategy in the
+wild:</p>
+
+<%= htmlize_hash(env['omniauth.auth']) %>

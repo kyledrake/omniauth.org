@@ -9,6 +9,10 @@ body
 a
   color: white
 
+code
+  color: #ffc
+  font-family: "Courier New", monospace
+
 #logo a
   display: block
   text-indent: -999em
@@ -83,3 +87,60 @@ ul.links
   li
     display: inline-block
     margin: 0 5px
+
+article.provider
+  background: #222228
+  padding: 10px 15px
+  +border-radius(6px)
+  text-align: right
+  margin-bottom: 10px
+  h1
+    float: left
+    font-size: 20px
+    font-weight: bold
+    color: white
+    float: left
+    line-height: 30px
+    small
+      color: #dde
+      font-size: 14px
+      font-weight: normal
+  nav 
+    a.button
+      background: #111116
+
+table.hash
+  font-size: 14px
+  width: 100%
+  overflow: hidden
+  tr:first-child th
+    +border-top-left-radius(5px)
+  tr:last-child th
+    +border-bottom-left-radius(5px)
+  td, th
+    padding: 8px 12px
+    overflow: hidden
+    display: table-cell
+  th
+    font-weight: bold
+    background: #222228
+    text-align: right
+    vertical-align: top
+    color: white
+    border-bottom: 1px solid #111116
+  td
+    background: white
+    color: #222
+    //font-family: Helvetica, Arial, sans-serif
+    margin-left: 150px
+    span.object
+      color: #474
+    border-bottom: 1px solid #eee
+  table
+    font-size: 90%
+    th
+      background: #556
+      border-color: #445
+    td
+      max-width: 300px
+      overflow: hidden

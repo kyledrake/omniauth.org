@@ -1,0 +1,32 @@
+concur:
+  name: Concur
+  author: dkastner
+  url: https://github.com/dkastner/omniauth-concur
+facebook:
+  name: Facebook
+  author: mkdynamic
+  url: https://github.com/mkdynamic/omniauth-facebook
+github:
+  name: GitHub
+  author: intridea
+  url: https://github.com/intridea/omniauth-github
+identity:
+  name: Identity
+  author: intridea
+  url: https://github.com/intridea/omniauth-identity
+ldap:
+  name: LDAP
+  author: intridea
+  url: https://github.com/intridea/omniauth-ldap
+linkedin:
+  name: LinkedIn
+  author: skorks
+  url: https://github.com/skorks/omniauth-linkedin
+open_id:
+  name: OpenID
+  author: intridea
+  url: https://github.com/intridea/omniauth-openid
+twitter:
+  name: Twitter
+  author: intridea
+  url: https://github.com/intridea/omniauth-twitter

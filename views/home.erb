@@ -1,0 +1,39 @@
+<p class='big'>OmniAuth is a Ruby authentication framework that provides a 
+standardized interface to many different authentication providers such as
+Facebook, OpenID, and even traditional username and password.</p>
+
+<section>
+  <h2>Quick Links</h1>
+
+  <ul class='links'>
+    <li><a href='https://github.com/intridea/omniauth'>GitHub Home</a></li>
+    <li><a href='https://github.com/intridea/omniauth/wiki'>Full Documentation</a></li>
+    <li><a href='https://github.com/intridea/omniauth/issues'>Report a Problem</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Getting Started</h2>
+
+<p>To use OmniAuth in a project with a Gemfile, just add each of the strategies
+you want to use individually:</p>
+
+<pre><code class='ruby'>gem 'omniauth-github'
+gem 'omniauth-identity'</code></pre>
+
+<p>Now you can use the <code>OmniAuth::Builder</code> Rack middleware to build
+up your list of OmniAuth strategies for use in your application:</p>
+
+<pre><code class='ruby'>use OmniAuth::Builder do
+  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :openid, :store => OpenID::Store::Filesystem.new('/tmp')
+end</pre></code>
+</section>
+
+<section>
+  <h2>Try OmniAuth!</h2>
+
+  <p>Want an idea of the different providers OmniAuth gives you the
+  ability to authenticate through? Try out any of the providers in the list below,
+  each one is a live example of authenticating with OmniAuth!</p>
+</section>

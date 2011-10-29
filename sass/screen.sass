@@ -1,0 +1,85 @@
+@import "compass"
+@import "compass/reset"
+
+body
+  font-family: "Open Sans", sans-serif
+  background: #334
+  color: #eef
+
+a
+  color: white
+
+#logo a
+  display: block
+  text-indent: -999em
+  background: url(/images/logo.png) no-repeat top center
+  height: 150px
+
+#top, #content, #bottom
+  width: 700px
+  margin: 0 auto
+
+#bottom
+  text-align: center
+  margin: 50px auto 15px
+  color: #889
+  font-size: 14px
+  a
+    color: #aab
+
+#content
+  h2
+    +border-top-radius(4px)
+    +box-sizing(border-box)
+    padding: 10px 15px
+    +linear-gradient(#334, #445)
+    font-size: 26px
+    color: #fff
+    font-weight: 700
+    margin-bottom: 20px
+    margin-top: 30px
+  section
+    margin: 15px 0
+  p.big
+    background: #222228
+    padding: 15px 20px
+    font-size: 18px
+    line-height: 150%
+    +border-radius(10px)
+    +box-shadow(0 0 15px #223)
+  p
+    padding: 0 15px
+    line-height: 140%
+    margin-bottom: 15px
+  pre
+    color: white
+    line-height: 130%
+    font-family: "Courier New", monospace
+    font-size: 14px
+    background: #222228
+    padding: 15px 20px
+    +border-radius(10px)
+    margin-bottom: 15px
+    +box-shadow(0 0 15px #223)
+
+=button
+  display: inline-block
+  padding: 8px 14px
+  text-decoration: none
+  font-weight: bold
+  +border-radius(4px)
+  +box-shadow(1px 1px 8px #222228, 0px 0px 3px rgba(0,0,0,0.5) inset)
+  +linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,0.5)), top)
+  background: #222228
+  +transition(all 0.25s)
+  &:hover
+    background: darken(#414654, 10%)
+
+a.button, .links a
+  +button
+
+ul.links 
+  text-align: center
+  li
+    display: inline-block
+    margin: 0 5px

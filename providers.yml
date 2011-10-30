@@ -1,7 +1,7 @@
-concur:
-  name: Concur
-  author: dkastner
-  url: https://github.com/dkastner/omniauth-concur
+# concur:
+#   name: Concur
+#   author: dkastner
+#   url: https://github.com/dkastner/omniauth-concur
 facebook:
   name: Facebook
   author: mkdynamic
@@ -14,10 +14,10 @@ identity:
   name: Identity
   author: intridea
   url: https://github.com/intridea/omniauth-identity
-ldap:
-  name: LDAP
-  author: intridea
-  url: https://github.com/intridea/omniauth-ldap
+# ldap:
+#   name: LDAP
+#   author: intridea
+#   url: https://github.com/intridea/omniauth-ldap
 linkedin:
   name: LinkedIn
   author: skorks

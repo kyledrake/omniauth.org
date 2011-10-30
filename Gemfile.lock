@@ -16,12 +16,25 @@ GIT
       omniauth-oauth2 (~> 1.0.0.rc2)
 
 GIT
+  remote: git://github.com/intridea/omniauth-identity.git
+  revision: 623589c6668c82e0aa803d6f00c0c23123ecb8f7
+  specs:
+    omniauth-identity (1.0.0.rc2)
+      omniauth (~> 1.0.0.rc2)
+
+GIT
   remote: git://github.com/mbleigh/omniauth-linkedin.git
   revision: 673a8688da9c8e6c9c96a1edc88f3518debe4f5a
   branch: patch-1
   specs:
     omniauth-linkedin (0.0.1)
       omniauth-oauth (~> 1.0.0.rc2)
+
+GIT
+  remote: git://github.com/mbleigh/ruby-openid.git
+  revision: 4b6fdd152edbc9d1f617056879eb03bd82b78eb4
+  specs:
+    ruby-openid (2.1.8)
 
 GIT
   remote: git://github.com/mkdynamic/omniauth-facebook.git
@@ -33,7 +46,17 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (3.1.1)
+      activesupport (= 3.1.1)
+      builder (~> 3.0.0)
+      i18n (~> 0.6)
+    activesupport (3.1.1)
+      multi_json (~> 1.0)
     addressable (2.2.6)
+    bcrypt-ruby (3.0.1)
+    bson (1.4.1)
+    bson_ext (1.4.1)
+    builder (3.0.0)
     chunky_png (1.2.5)
     compass (0.11.5)
       chunky_png (~> 1.2)
@@ -45,6 +68,13 @@ GEM
       rack (< 2, >= 1.1.0)
     fssm (0.2.7)
     hashie (1.2.0)
+    i18n (0.6.0)
+    mongo (1.4.1)
+      bson (= 1.4.1)
+    mongoid (2.3.2)
+      activemodel (~> 3.1)
+      mongo (~> 1.4)
+      tzinfo (~> 0.3.22)
     multi_json (1.0.3)
     multipart-post (1.1.3)
     oauth (0.4.5)
@@ -63,31 +93,38 @@ GEM
     omniauth-openid (1.0.0.rc2)
       omniauth (~> 1.0.0.rc2)
       rack-openid (~> 1.3.1)
+    openid_mongodb_store (0.3.0)
+      mongo (~> 1.3)
+      ruby-openid (~> 2.1)
     rack (1.3.5)
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
     rack-protection (1.1.4)
       rack
-    redis (2.2.2)
-    ruby-openid (2.1.8)
     sass (3.1.10)
     sinatra (1.3.1)
       rack (~> 1.3, >= 1.3.4)
       rack-protection (~> 1.1, >= 1.1.2)
       tilt (~> 1.3, >= 1.3.3)
     tilt (1.3.3)
+    tzinfo (0.3.30)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
+  bson_ext
   compass
+  mongoid
   omniauth (~> 1.0.0.rc2)
   omniauth-contrib (~> 1.0.0.rc2)!
   omniauth-facebook!
   omniauth-github (~> 1.0.0.rc2)!
+  omniauth-identity!
   omniauth-linkedin!
   omniauth-openid (~> 1.0.0.rc2)
-  redis
+  openid_mongodb_store
+  ruby-openid!
   sinatra

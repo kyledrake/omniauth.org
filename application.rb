@@ -4,22 +4,26 @@ ENV['RACK_ENV'] ||= 'development'
 require 'bundler'
 Bundler.require :default, ENV['RACK_ENV']
 
-require 'redis'
-require 'openid-redis-store'
+require 'identity'
 
-if ENV['REDISTOGO_URL']
-  uri = URI.parse(ENV["REDISTOGO_URL"])
-  $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+if ENV['MONGOHQ_URL']
+  uri = URI.parse(ENV['MONGOHQ_URL'])
+  $mongodb = Mongo::Connection.from_uri(ENV['MONGOHQ_URL']).db(uri.path.gsub(/^\//, ''))
 else
-  $redis = Redis.new
+  $mongodb = Mongo::Connection.new.db('try_omniauth')
+end
+
+Mongoid.configure do |config|
+  config.master = $mongodb
 end
 
 use Rack::Session::Cookie
 use OmniAuth::Builder do
   provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
   provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :identity
   provider :linkedin, ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET']
-  provider :open_id, :store => OpenID::Store::Redis.new($redis, 'openid:')
+  provider :open_id, :store => OpenidMongodbStore::Store.new($mongodb)
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
 end
 
@@ -61,9 +65,11 @@ get '/auth/failure' do
   erb :failure
 end
 
-get '/auth/:provider/callback' do
-  @auth = env['omniauth.auth']
-  erb :callback
+[:get, :post].each do |method|
+  send(method, '/auth/:provider/callback') do
+    @auth = env['omniauth.auth']
+    erb :callback
+  end
 end
 
 get '/stylesheet.css' do

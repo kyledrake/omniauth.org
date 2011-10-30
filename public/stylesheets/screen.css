@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 4, ../../sass/screen.sass */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background: #333344;
   color: #eeeeff;
 }
@@ -171,8 +171,8 @@ code {
   line-height: 130%;
   font-family: "Courier New", monospace;
   font-size: 14px;
-  background: #222228;
-  padding: 15px 20px;
+  background: black;
+  padding: 10px 15px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;

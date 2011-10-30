@@ -30,6 +30,20 @@ up your list of OmniAuth strategies for use in your application:</p>
 end</pre></code>
 </section>
 
+<p>By default, OmniAuth will return auth information to the path 
+<code>/auth/:provider/callback</code> inside the Rack environment. In Sinatra,
+for example, a callback might look something like this:</p>
+
+<pre><code class='ruby'># Support both GET and POST for callbacks
+%w(get post).each do |method|
+  send(method, "/auth/:provider/callback") do
+    env['omniauth.auth'] # => OmniAuth::AuthHash
+  end
+end</code></pre>
+
+<p>For additional documentation, you should see the 
+<a href='https://github.com/intridea/omniauth/wiki'>OmniAuth wiki</a>.</p>
+
 <section>
   <h2>Try OmniAuth!</h2>
 

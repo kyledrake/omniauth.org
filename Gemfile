@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'compass'
+gem 'bson'
 gem 'bson_ext'
 gem 'mongoid'
 gem 'openid_mongodb_store'

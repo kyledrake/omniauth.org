@@ -115,6 +115,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
+  bson
   bson_ext
   compass
   mongoid

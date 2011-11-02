@@ -29,4 +29,4 @@ open_id:
 twitter:
   name: Twitter
   author: intridea
-  url: https://github.com/intridea/omniauth-twitter
+  url: https://github.com/intridea/omniauth-contrib

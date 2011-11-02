@@ -1,26 +1,11 @@
 GIT
   remote: git://github.com/intridea/omniauth-contrib.git
-  revision: bb61386c2b1032ff7ccafd8ed7ca3ceafd3c12aa
+  revision: 48e914f905df146adf45eac635c2244625191d21
   specs:
-    omniauth-contrib (1.0.0.rc2)
+    omniauth-contrib (1.0.0)
       multi_json
-      omniauth (~> 1.0.0.rc2)
-      omniauth-oauth (~> 1.0.0.rc2)
-
-GIT
-  remote: git://github.com/intridea/omniauth-github.git
-  revision: 9b9660d6d2759ccb726717fdfefd826b6c4989fe
-  specs:
-    omniauth-github (1.0.0.rc2)
-      omniauth (~> 1.0.0.rc2)
-      omniauth-oauth2 (~> 1.0.0.rc2)
-
-GIT
-  remote: git://github.com/intridea/omniauth-identity.git
-  revision: 623589c6668c82e0aa803d6f00c0c23123ecb8f7
-  specs:
-    omniauth-identity (1.0.0.rc2)
-      omniauth (~> 1.0.0.rc2)
+      omniauth (~> 1.0)
+      omniauth-oauth (~> 1.0)
 
 GIT
   remote: git://github.com/mbleigh/omniauth-linkedin.git
@@ -38,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/mkdynamic/omniauth-facebook.git
-  revision: e585e8d9158f3317322c2c29cf6b97bfd414ec85
+  revision: 0959ab1962f7ad83248c3e87827695e6777049fc
   specs:
     omniauth-facebook (1.0.0.rc1)
       omniauth-oauth2 (~> 1.0.0.rc2)
@@ -81,17 +66,22 @@ GEM
     oauth2 (0.5.1)
       faraday (~> 0.7.4)
       multi_json (~> 1.0.3)
-    omniauth (1.0.0.rc2)
+    omniauth (1.0.0)
       hashie (~> 1.2)
       rack
-    omniauth-oauth (1.0.0.rc2)
+    omniauth-github (1.0.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
+    omniauth-identity (1.0.0)
+      omniauth (~> 1.0)
+    omniauth-oauth (1.0.0)
       oauth
-      omniauth (~> 1.0.0.rc2)
-    omniauth-oauth2 (1.0.0.rc2)
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
-      omniauth (~> 1.0.0.rc2)
-    omniauth-openid (1.0.0.rc2)
-      omniauth (~> 1.0.0.rc2)
+      omniauth (~> 1.0)
+    omniauth-openid (1.0.0)
+      omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
     openid_mongodb_store (0.3.0)
       mongo (~> 1.3)
@@ -119,13 +109,13 @@ DEPENDENCIES
   compass
   mongo (= 1.3.1)
   mongoid (= 2.2.3)
-  omniauth (~> 1.0.0.rc2)
-  omniauth-contrib (~> 1.0.0.rc2)!
+  omniauth
+  omniauth-contrib!
   omniauth-facebook!
-  omniauth-github (~> 1.0.0.rc2)!
-  omniauth-identity!
+  omniauth-github
+  omniauth-identity
   omniauth-linkedin!
-  omniauth-openid (~> 1.0.0.rc2)
+  omniauth-openid
   openid_mongodb_store
   ruby-openid!
   sinatra

@@ -30,3 +30,7 @@ twitter:
   name: Twitter
   author: intridea
   url: https://github.com/intridea/omniauth-contrib
+geoloqi:
+  name: Geoloqi
+  author: kyledrake
+  url: https://github.com/geoloqi/omniauth-geoloqi

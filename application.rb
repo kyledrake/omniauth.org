@@ -25,6 +25,7 @@ use OmniAuth::Builder do
   provider :linkedin, ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET']
   provider :open_id, :store => OpenidMongodbStore::Store.new($mongodb)
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+  provider :geoloqi, ENV['GEOLOQI_KEY'], ENV['GEOLOQI_SECRET']
 end
 
 OMNIAUTH_STRATEGIES = YAML.load_file(File.dirname(__FILE__) + '/providers.yml').inject([]) do |arr, (provider, hash)|
